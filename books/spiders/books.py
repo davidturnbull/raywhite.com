@@ -11,6 +11,7 @@ class ListingSpider(SitemapSpider):
   sitemap_urls = ["https://www.raywhite.com/sitemapindex.xml"]
   sitemap_rules = [
       ("/rwmap_properties_", "parse_listing"),
+  ]
 
   def parse_listing(self, response):
     item = Listing()
