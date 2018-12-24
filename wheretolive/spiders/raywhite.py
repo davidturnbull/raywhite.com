@@ -1,11 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
 from scrapy.spiders import SitemapSpider
-
-class Listing(scrapy.Item):
-    url = scrapy.Field()
-    status = scrapy.Field()
-    html = scrapy.Field()
+from wheretolive.items import Listing
 
 class raywhiteSpider(SitemapSpider):
   name = "raywhite"
