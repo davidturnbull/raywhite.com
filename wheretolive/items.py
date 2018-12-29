@@ -1,13 +1,18 @@
 # -*- coding: utf-8 -*-
 
-# Define here the models for your scraped items
-#
-# See documentation in:
-# http://doc.scrapy.org/en/latest/topics/items.html
-
 import scrapy
 
 class Listing(scrapy.Item):
+    url = scrapy.Field()
+    status = scrapy.Field()
+    html = scrapy.Field()
+
+class Agency(scrapy.Item):
+    url = scrapy.Field()
+    status = scrapy.Field()
+    html = scrapy.Field()
+
+class Agent(scrapy.Item):
     url = scrapy.Field()
     status = scrapy.Field()
     html = scrapy.Field()

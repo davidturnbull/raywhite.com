@@ -3,8 +3,8 @@ import scrapy
 from scrapy.spiders import SitemapSpider
 from wheretolive.items import Listing
 
-class allhomesSpider(SitemapSpider):
-    name = "allhomes"
+class allhomesListingSpider(SitemapSpider):
+    name = "allhomes_listings"
     allowed_domains = ["allhomes.com.au"]
     sitemap_urls = ["https://www.allhomes.com.au/listings.xml"]
     sitemap_follow = ["listings"]
