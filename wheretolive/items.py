@@ -11,6 +11,7 @@ class Agency(scrapy.Item):
     url = scrapy.Field()
     status = scrapy.Field()
     html = scrapy.Field()
+    json = scrapy.Field()
 
 class Agent(scrapy.Item):
     url = scrapy.Field()
