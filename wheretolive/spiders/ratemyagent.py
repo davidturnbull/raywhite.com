@@ -10,7 +10,7 @@ class ratemyagentAgencySpider(SitemapSpider):
     sitemap_urls = ["https://www.ratemyagent.com.au/sitemap.xml"]
     sitemap_follow = ["sitemap-agencies"]
     sitemap_rules = [
-        ('/reviews/', 'parse_agency')
+        ('/reviews', 'parse_agency')
     ]
 
     # https://www.ratemyagent.com.au/sitemap.xml
