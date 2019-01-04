@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
+import re
 import urllib
 from scrapy.spiders import SitemapSpider
 from wheretolive.items import Listing
@@ -19,7 +20,7 @@ class ratemyagentAgencySpider(SitemapSpider):
     def parse_agency(self, response):
 
         # Extract the agency ID from the URL
-        agency_id = response.url.search("-(\w+\d+)\/").group(1)
+        agency_id = re.search('-(\w+\d+)\/', response.url).group(1)
         api_url = "https://api.ratemyagent.com.au/Agencies/Code-" + agency_id
 
         item = Agency()
