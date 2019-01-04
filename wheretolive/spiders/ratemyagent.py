@@ -3,7 +3,7 @@ import scrapy
 import re
 import urllib
 from scrapy.spiders import SitemapSpider
-from wheretolive.items import Listing
+from wheretolive.items import Agency
 
 class ratemyagentAgencySpider(SitemapSpider):
     name = "ratemyagent_agencies"
